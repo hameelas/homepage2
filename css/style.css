@@ -1,0 +1,82 @@
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+
+article>p {
+	overflow: auto;
+}
+
+body {
+	margin: auto;
+	background-color: #F2F2F2;
+	color: #111;
+	font-family: 'Ubuntu', serif;
+}
+
+.caption {
+	font-family: 'PT Sans Caption', serif;
+	text-decoration: none;
+	color: #FFF;
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+a:hover {
+	color: rgb(100, 170, 70);
+}
+
+header {
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 30px;
+	padding: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 50px;
+	min-height: 280px;
+	background-color: #222;
+}
+
+article {
+	padding: 0px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	overflow: auto;
+}
+
+article>p {
+	text-align: left;
+	padding-left: 30px;
+	margin-top: 30px;
+}
+
+article>ul {
+	padding-left: 60px;
+}
+
+.circular {
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	background: url(../img/me.jpg) no-repeat;
+	background-size: 180px 180px;
+	text-align: center;
+	margin: 30px auto;
+	margin-right: 80px;
+}
+
+.circular img {
+	opacity: 0;
+	width: 180px;
+	height: 180px;
+/*	filter: alpha(opacity=0);*/
+}
+
+.logo {
+	float: left;
+}
