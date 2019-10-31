@@ -1,25 +1,20 @@
 var screenH = window.innerHeight;
 var screenW = window.innerWidth;
+var isSmartphone = (screenW < screenH);
 var org_height = $('header').outerHeight();
 var org_size = $('.circular').outerHeight();
 var org_left_padding  = parseInt($('.logowrapper').css('padding-left'));
-var org_top_margin = parseInt($('.caption').css('margin-top'));
-var org_caption_height = parseInt($('.caption').css('height'));
 
 function get_y() {
-    var y = $('.snappy-scroll').scrollTop();
+    var y = $('.scroll-wrapper').scrollTop();
     return y;
 }
 
 function updateSizes() {
-   // $('header').stop(true, true);
    var y = get_y();
-   /*console.log("screenH", screenH);
-   console.log("y", y);*/
-
    var limit = screenH / 4;
    var target = Math.max(limit, org_height - y);
-   if (target > 2 * limit) {
+   if (target > 2 * limit && !isSmartphone) {
       $('.hides').css({ 'display': 'block' });
       $('.appears').css({ 'display': 'none' });
    }
@@ -38,15 +33,6 @@ function updateSizes() {
 
    var new_padding = progress * screenW * 0.12 + (1 - progress) * org_left_padding;
    $('.logowrapper').css('padding-left', new_padding + 'px');
-
-   /*var new_margin = progress * screenH / 8 + (1 - progress) * org_top_margin;
-   $('.caption').css('margin-top', new_margin + 'px');*/
-
-   //var new_caption_height = progress * screen / 4 + (1 - progress) * org_caption_height;
-   //$('.caption').css('height', new_caption_height + 'px');
-    /*if (screenH > screenW) {
-        $('.cover').css('background', 'url(../img/umd-blurred-vertical.png) no-repeat');
-    }*/
 }
 
 function clickableButtons() {
@@ -71,34 +57,31 @@ function pageTitle() {
          nearest = page;
       }
     }
-    //console.log('nearest', nearest, $('h3.page').firstChild.innerHTML());
     $('h3.page').html(nearest);
 }
 
 function correctBackground(){
-    /*if (screenH > screenW)
-        $('.cover').css('background', 'url(../img/umd-blurred-vertical.png) no-repeat');
-    else
-        $('.cover').css('background', 'url(../img/umd-blurred.jpg) no-repeat');*/
+    if (isSmartphone)
+        $('.cover').addClass('vertical');
 }
 
 $(document).ready(function() {
     correctBackground();
     updateSizes();
-    cssScrollSnapPolyfill();
-    pageTitle();
+    if (!isSmartphone) {
+        console.log('not a smartphone.');
+        cssScrollSnapPolyfill();
+        pageTitle();
+    }
+    else {
+        $('.scroll-wrapper').removeClass('snappy-scroll');
+    }
     clickableButtons();
-    $(window).resize(function () {
-       correctBackground();
-       updateSizes();
-    })
 });
 
-$('.snappy-scroll').scroll(function () {
-   var y = updateSizes();
-   pageTitle(y);
-});
-$('window').on("scroll", function (e) {
-   /*console.log('WINDOW');*/
-   //$('.snappy-scroll').trigger("scroll", e);
+$('.scroll-wrapper').scroll(function () {
+    updateSizes();
+    if (!isSmartphone) {
+        pageTitle();
+    }
 });

@@ -90,6 +90,9 @@ span.button.resume{
 	margin-right: 10%;
 }
 
+.lefty {
+	padding-left: 10%;
+}
 
 header {
     position: fixed;
@@ -113,6 +116,10 @@ header {
 }
 
 .appears {
+	display: none;
+}
+
+.hides {
 	display: none;
 }
 
@@ -213,6 +220,11 @@ article>ul {
 	overflow-y: auto;
 }
 
+.scroll-wrapper {
+	height: 100vh;
+	overflow-y: auto;
+}
+
 .child {
   	scroll-snap-align: start;
 	min-height: 80vh;
@@ -223,5 +235,9 @@ article>ul {
 	background: url(../img/umd-blurred.jpg) no-repeat;
 	background-size: 100%;
 	height: 100vh;
+}
+
+.cover.vertical {
+	background: url(../img/umd-blurred-vertical.png) no-repeat;
 }
 
