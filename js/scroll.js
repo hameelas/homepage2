@@ -12,11 +12,16 @@ function get_y() {
 
 function updateSizes() {
    var y = get_y();
-   var limit = screenH / 4;
+   var limit = isSmartphone? screenH / 5 : screenH / 4;
    var target = Math.max(limit, org_height - y);
    if (target > 2 * limit && !isSmartphone) {
       $('.hides').css({ 'display': 'block' });
       $('.appears').css({ 'display': 'none' });
+   }
+   else if (target < 2 * limit && isSmartphone) {
+       $('.hides').css({'display': 'none'});
+       $('.appears').css({'display': 'block'});
+       $('.appears.hidesinsp').css({'display': 'none'})
    }
    else {
        $('.hides').css({'display': 'none'});
@@ -31,11 +36,14 @@ function updateSizes() {
    $('.circular').outerWidth(new_size + 'px');
    $('.circular').css({ 'background-size': new_size + 'px ' + new_size + 'px' });
 
-   var new_padding = progress * screenW * 0.12 + (1 - progress) * org_left_padding;
+   var new_padding = progress * screenW * (isSmartphone? 0.05 : 0.12) + (1 - progress) * org_left_padding;
    $('.logowrapper').css('padding-left', new_padding + 'px');
 }
 
 function clickableButtons() {
+    if (isSmartphone) {
+        $('span.button').addClass('vertical');
+    }
    $('span.button').click(function () {
       window.open($(this).attr('href'));
       return false;
@@ -75,6 +83,7 @@ $(document).ready(function() {
     }
     else {
         $('.scroll-wrapper').removeClass('snappy-scroll');
+        $('.logowrapper').css('margin-top', '5%');
     }
     clickableButtons();
 });

@@ -63,6 +63,10 @@ span.button {
 	cursor: pointer;
 }
 
+span.button.vertical {
+	margin-left: 10px;
+}
+
 span.button.dblp{
 	background: url(../img/dblp.png) no-repeat;
 }
@@ -91,7 +95,7 @@ span.button.resume{
 }
 
 .lefty {
-	padding-left: 10%;
+	padding-left: 5%;
 }
 
 header {
