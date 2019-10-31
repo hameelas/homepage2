@@ -44,9 +44,9 @@ function updateSizes() {
 
    //var new_caption_height = progress * screen / 4 + (1 - progress) * org_caption_height;
    //$('.caption').css('height', new_caption_height + 'px');
-    if (screenH > screenW) {
+    /*if (screenH > screenW) {
         $('.cover').css('background', 'url(../img/umd-blurred-vertical.png) no-repeat');
-    }
+    }*/
 }
 
 function clickableButtons() {
@@ -76,10 +76,10 @@ function pageTitle() {
 }
 
 function correctBackground(){
-    if (screenH > screenW)
+    /*if (screenH > screenW)
         $('.cover').css('background', 'url(../img/umd-blurred-vertical.png) no-repeat');
     else
-        $('.cover').css('background', 'url(../img/umd-blurred.jpg) no-repeat');
+        $('.cover').css('background', 'url(../img/umd-blurred.jpg) no-repeat');*/
 }
 
 $(document).ready(function() {
