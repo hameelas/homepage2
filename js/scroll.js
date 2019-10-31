@@ -12,7 +12,7 @@ function get_y() {
 
 function updateSizes() {
    var y = get_y();
-   var limit = isSmartphone? screenH / 5 : screenH / 4;
+   var limit = isSmartphone? screenH / 4 : screenH / 4;
    var target = Math.max(limit, org_height - y);
    if (target > 2 * limit && !isSmartphone) {
       $('.hides').css({ 'display': 'block' });
@@ -21,11 +21,13 @@ function updateSizes() {
    else if (target < 2 * limit && isSmartphone) {
        $('.hides').css({'display': 'none'});
        $('.appears').css({'display': 'block'});
-       $('.appears.hidesinsp').css({'display': 'none'})
+       $('.appears.hidesinsp').css({'display': 'none'});
+       $('h1.caption').css({'font-size': '1.5em'});
    }
    else {
        $('.hides').css({'display': 'none'});
        $('.appears').css({'display': 'block'});
+       $('h1.caption').css({'font-size': '2em'});
    }
    $('header').outerHeight(target + 'px');
 
@@ -83,7 +85,7 @@ $(document).ready(function() {
     }
     else {
         $('.scroll-wrapper').removeClass('snappy-scroll');
-        $('.logowrapper').css('margin-top', '5%');
+        $('.logowrapper').css('padding-top', '5%');
     }
     clickableButtons();
 });
