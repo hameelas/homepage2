@@ -10,36 +10,134 @@ article>p {
 
 body {
 	margin: auto;
-	background-color: #FFF;
-	color: #222;
-	font-family: 'Ubuntu', serif;
+	background-color: #FFFFFF;
+	font-family: Ubuntu, serif !important;
+	font-size: 1.7em;
 }
 
-.caption {
-	font-family: 'PT Sans Caption', serif;
-	text-decoration: none;
-	color: #FFF;
-	margin-top: 50px;
-	margin-bottom: 20px;
+.phono {
+	font-size: 0.5em;
+	margin-left: 1%;
+}
+
+.mono {
+	font-family: monospace;
+}
+
+.mono.margin {
+	font-size: 0.8em;
+	margin-left: 15px;
+	margin-right: 15px;
+	pointer-events: none;
+}
+
+a {
+	color: rgb(240, 40, 25);
+	text-decoration: none !important;
 }
 
 a:hover {
-	color: rgb(100, 170, 70);
+	color: rgb(130, 40, 25) !important;
+	text-underline: none !important;
 }
 
+a:link {
+	color: rgb(240, 40, 25) !important;
+	text-underline: none !important;
+}
+
+a:visited {
+	color: rgb(200, 40, 25);
+	text-underline: none !important;
+}
+
+span.button {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	width: 1.5em;
+	min-height: 1.5em;
+	border: none;
+	background-color: rgb(255, 255, 255);
+	background-size: contain !important;
+	cursor: pointer;
+}
+
+span.button.dblp{
+	background: url(../img/dblp.png) no-repeat;
+}
+
+
+span.button.scholar{
+	background: url(../img/scholar.ico) no-repeat;
+}
+
+
+span.button.codeforces{
+	background: url(../img/codeforces.png) no-repeat;
+}
+
+
+span.button.github{
+	background: url(../img/github.ico) no-repeat;
+}
+
+span.button.resume{
+	background: url(../img/resume.png) no-repeat;
+}
+
+.righty {
+	margin-right: 10%;
+}
+
+
 header {
-    top: -50;
-    width: 100%;
-    z-index: 10;
     position: fixed;
+	width: 100%;
+    z-index: 10;
 	text-align: left;
 	margin-top: 0px;
 	margin-bottom: 0px;
-    padding: 120px 70px;
-    height: 470px;
-	background-color: rgba(0,0,0,0.85);
+    /*padding: 20% 10%;*/
+    height: 70%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.75);
+	color: #FFF;
 	/*border-bottom: 4px solid #EEE;
 	 */
+	pointer-events: none;
+}
+
+.h1 {
+	font-size: 2em !important;
+}
+
+.appears {
+	display: none;
+}
+
+.flexer {
+	display: flex;
+	align-content: center;
+}
+
+.flexer.hor {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flexer.ver {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+.flexy {
+	flex-basis: auto;
+	flex-grow: 1;
 }
 
 .above {
@@ -49,11 +147,17 @@ header {
 article {
 	padding-left: 10%;
 	padding-right: 10%;
-	padding-top: 40vh;
+	padding-top: 35px;
 	padding-bottom: 30px;
 }
 
 article>p {
+	text-align: left;
+	padding-left: 30px;
+	margin-top: 30px;
+}
+
+article>h3 {
 	text-align: left;
 	padding-left: 30px;
 	margin-top: 30px;
@@ -66,12 +170,10 @@ article>ul {
 .circular {
 	width: 230px;
 	height: 230px;
-	border-radius: 115px;
-	background: url(../img/me.jpg) no-repeat;
+	border-radius: 50%;
+	background: url(../img/me3.png) no-repeat;
 	background-size: 230px 230px;
 	text-align: center;
-	margin-right: 80px;
-    margin-left: 80px;
 	border: 4px solid #FFF;
 }
 
@@ -82,24 +184,44 @@ article>ul {
 /*	filter: alpha(opacity=0);*/
 }
 
-.logo {
-	float: left;
+.logowrapper {
+	padding-left: 15%;
+	padding-right: 5%;
 }
+
+.caption {
+	font-family: 'PT Sans Caption', serif;
+	text-decoration: none;
+	flex-shrink: 0;
+	height: 12%;
+}
+
+.subcaption {
+	font-family: 'Ubuntu', serif;
+	text-decoration: none;
+	font-weight: lighter;
+	margin-top: 20px;
+	padding-right: 20%;
+	flex-shrink: 1;
+}
+
 .snappy-scroll {
 	-ms-scroll-snap-type: mandatory;
       scroll-snap-type: y mandatory;
+	scroll-padding-top: 25vh;
 	height: 100vh;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .child {
   	scroll-snap-align: start;
-	height: 100vh;
+	min-height: 80vh;
 	width: auto;
 }
 
 .cover {
 	background: url(../img/umd-blurred.jpg) no-repeat;
 	background-size: 100%;
+	height: 100vh;
 }
 
