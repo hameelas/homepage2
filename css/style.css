@@ -51,6 +51,26 @@ a:visited {
 	text-underline: none !important;
 }
 
+.child.inverse a {
+	color: rgb(40, 170, 25);
+	text-decoration: none !important;
+}
+
+.child.inverse a:hover {
+	color: rgb(40, 90, 25) !important;
+	text-decoration: none !important;
+}
+
+.child.inverse a:link {
+	color: rgb(40, 170, 25) !important;
+	text-decoration: none !important;
+}
+
+.child.inverse a:visited {
+	color: rgb(40, 140, 25);
+	text-decoration: none !important;
+}
+
 span.button {
 	display: inline-block;
 	vertical-align: middle;
@@ -108,7 +128,7 @@ header {
     /*padding: 20% 10%;*/
     height: 70%;
 	overflow: hidden;
-	background-color: rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0.80);
 	color: #FFF;
 	/*border-bottom: 4px solid #EEE;
 	 */
@@ -233,6 +253,11 @@ article>ul {
   	scroll-snap-align: start;
 	min-height: 80vh;
 	width: auto;
+}
+
+.child.inverse {
+	background-color: #000;
+	color: #FFF;
 }
 
 .cover {

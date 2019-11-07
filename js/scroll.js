@@ -57,7 +57,8 @@ function pageTitle() {
     var pagemap = {
         '': 0,
         'About Me': screenH / 2,
-        'Publications': 3 * screenH / 2
+        'Publications': 3 * screenH / 2,
+        'Codes': 6 * screenH / 2
     };
     var y = get_y();
     var nearest = '', distance = 1000 * 1000;
