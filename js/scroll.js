@@ -12,7 +12,7 @@ function get_y() {
 
 function updateSizes() {
    var y = get_y();
-   var limit = isSmartphone? screenH / 4 : screenH / 4;
+   var limit = screenH/4 + 1;
    var target = Math.max(limit, org_height - y);
    if (target > 2 * limit && !isSmartphone) {
       $('.hides').css({ 'display': 'block' });
@@ -46,7 +46,7 @@ function clickableButtons() {
     if (isSmartphone) {
         $('span.button').addClass('vertical');
     }
-   $('span.button').click(function () {
+   $('span.clickable').click(function () {
       window.open($(this).attr('href'));
       return false;
    });
@@ -85,6 +85,7 @@ $(document).ready(function() {
         pageTitle();
     }
     else {
+        $('article').addClass('vertical');
         $('.scroll-wrapper').removeClass('snappy-scroll');
         $('.logowrapper').css('padding-top', '5%');
     }

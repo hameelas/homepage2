@@ -50,7 +50,7 @@
 					<h3 class="page"></h3>
 				</div>
 			</header>
-			<div class="cover child" page="cover"></div>
+			<div class="cover child"></div>
 			<article class="child">
 				<p>
 					My name is Hamed Saleh, and I am a PhD student in the <a href="https://www.cs.umd.edu">CS</a> Department
@@ -60,11 +60,11 @@
 
 				<p>
 					links:
-					<span href="https://dblp.org/pers/hd/s/Saleh:Hamed" class="button dblp"></span>
-					<span href="https://scholar.google.com/citations?user=8t3aDXgAAAAJ&hl=en" class="button scholar"></span>
-					<span href="http://codeforces.com/profile/haas" class="button codeforces"></span>
-					<span href="https://github.com/hameelas" class="button github"></span>
-					<span href="share/hamedsaleh-resume.pdf" class="button resume"></span>
+					<span href="https://dblp.org/pers/hd/s/Saleh:Hamed" class="clickable button dblp"></span>
+					<span href="https://scholar.google.com/citations?user=8t3aDXgAAAAJ&hl=en" class="clickable button scholar"></span>
+					<span href="http://codeforces.com/profile/haas" class="clickable button codeforces"></span>
+					<span href="https://github.com/hameelas" class="clickable button github"></span>
+					<span href="share/hamedsaleh-resume.pdf" class="clickable button resume"></span>
 				</p>
 
 				<p>
@@ -81,6 +81,8 @@
 					<span class="mono margin">hamed [at] cs.umd.edu</span> or
 					<span class="mono margin">hameelas [at] gmail.com</span>
 				</p>
+
+                <p class="filler"></p>
 			</article>
 
 			<article class="child">
@@ -141,12 +143,39 @@
 					External Reviewer for conferences COCOON'18, ISAAC'18, and WWW'20.
 				</p>
 
+                <p class="filler"></p>
 			</article>
 
 			<article class="child inverse">
 				<p>
-					<b> TPS. <a href="https://arxiv.org/abs/1910.11829">arXiv</a> </b>
+					<b> Task Preparation System, <a href="https://github.com/ioi-2017/tps">tps</a>.</b><br/>
+					with Kian Mirjalali<br/>
+					tps is a command-line interface for developing IOI/ICPC-like problems, with a workflow mainly
+					inspired by <a href="https://polygon.codeforces.com/">Polygon</a>. It has been used to prepare
+                    the tasks in <a href="http://ioi2017.org/">IOI 2017</a>, and Iranian National Olympiad in Informatics.
+                    There is also a <a href="https://github.com/ioi-2017/tps-web">web interface</a> counter-part implemented for tps.
 				</p>
+
+                <div class="flexer hor">
+                    <p class="imaged">
+                        <b>IOI Site Administration System, <a href="https://github.com/ioi-2017/site-admin">site-admin</a>.</b><br/>
+                        with Amin Khashkhashi Moghaddam<br/>
+                        A web-interface to monitor and manage the nodes in a programming contest hall.
+                        site-admin integrates the data of participants and physical nodes,
+                        and it allows you to perform personalized bash or python scripts on the nodes remotely,
+                        and to monitor the progress.
+                    </p>
+                    <span href="img/monitor.png" class="clickable image monitor flexy"></span>
+                </div>
+
+                <p>
+					<b> HelliJudge, or <a href="https://github.com/jux-foundation">jux</a>.</b><br/>
+					with Mahrud Sayrafi<br/>
+                    A programming competition judge with focus on security. The judge runs programs in
+                    a minimal chroot "jail" environment based on Fedora to simulate secure sand-boxing in pre-docker era.
+				</p>
+
+                <p class="filler"></p>
 			</article>
 		</div>
 
