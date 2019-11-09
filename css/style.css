@@ -68,10 +68,6 @@ a:visited {
 	text-decoration: none !important;
 }
 
-span.clickable {
-	cursor: pointer;
-}
-
 span.button {
 	display: inline-block;
 	vertical-align: middle;
@@ -293,14 +289,9 @@ article .flexer.hor {
 	align-items: start;
 }
 
-article span.image {
-	min-height: 200px;
-	width: 300px;
+article span.image.flexy {
 	flex-grow: 1;
 	text-align: center;
-	display: inline-block;
-	background-size: contain !important;
-	cursor: pointer;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-left: 5%;
@@ -308,6 +299,10 @@ article span.image {
 
 article span.image.monitor {
 	background: url(../img/monitor.png) no-repeat;
+	background-size: contain !important;
+	width: 300px;
+	min-height: 200px;
+	display: inline-block;
 }
 
 article p.imaged {

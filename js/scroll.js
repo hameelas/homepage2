@@ -42,17 +42,6 @@ function updateSizes() {
    $('.logowrapper').css('padding-left', new_padding + 'px');
 }
 
-function clickableButtons() {
-    if (isSmartphone) {
-        $('span.button').addClass('vertical');
-    }
-   $('span.clickable').click(function () {
-      window.open($(this).attr('href'));
-      return false;
-   });
-}
-
-
 function pageTitle() {
     var pagemap = {
         '': 0,
@@ -86,10 +75,10 @@ $(document).ready(function() {
     }
     else {
         $('article').addClass('vertical');
+        $('span.button').addClass('vertical');
         $('.scroll-wrapper').removeClass('snappy-scroll');
         $('.logowrapper').css('padding-top', '5%');
     }
-    clickableButtons();
 });
 
 $('.scroll-wrapper').scroll(function () {
