@@ -1,0 +1,31 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--
+ created with Free Online Sitemap Generator www.xml-sitemaps.com 
+-->
+<url>
+<loc>https://www.cs.umd.edu/~hamed/</loc>
+<lastmod>2019-11-09T01:05:22+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>
+https://www.cs.umd.edu/~hamed/share/hamedsaleh-resume.pdf
+</loc>
+<lastmod>2019-11-01T21:06:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>
+https://www.cs.umd.edu/~hamed/share/edgecoloring.pptx
+</loc>
+<lastmod>2019-11-01T21:06:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>
+https://www.cs.umd.edu/~hamed/share/externalities-poster.pdf
+</loc>
+<lastmod>2019-11-01T21:06:21+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+</urlset>
