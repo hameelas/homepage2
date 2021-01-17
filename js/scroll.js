@@ -1,9 +1,24 @@
-var screenH = window.innerHeight;
-var screenW = window.innerWidth;
-var isSmartphone = (screenW < screenH);
-var org_height = $('header').outerHeight();
-var org_size = $('.circular').outerHeight();
-var org_left_padding  = parseInt($('.logowrapper').css('padding-left'));
+var screenH;
+var screenW;
+var isSmartphone;
+var org_height;
+var org_size;
+var org_left_padding;;
+
+function setIsSmartphone() {
+    screenH = window.innerHeight;
+    screenW = window.innerWidth;
+    isSmartphone = (screenW < screenH);
+}
+
+function init() {
+    setIsSmartphone();
+    org_height = $('header').outerHeight();
+    org_size = $('.circular').outerHeight();
+    org_left_padding  = parseInt($('.logowrapper').css('padding-left'));
+}
+
+init();
 
 function get_y() {
     var y = $('.scroll-wrapper').scrollTop();
@@ -60,9 +75,12 @@ function pageTitle() {
     $('h3.page').html(nearest);
 }
 
-function correctBackground(){
-    if (isSmartphone)
+function correctBackground() {
+    setIsSmartphone();
+    if (isSmartphone) {
         $('.cover').addClass('vertical');
+        $('.cover').css('background-size', '100% auto');
+    }
 }
 
 $(document).ready(function() {
@@ -83,6 +101,7 @@ $(document).ready(function() {
 
 $('.scroll-wrapper').scroll(function () {
     updateSizes();
+    correctBackground();
     if (!isSmartphone) {
         pageTitle();
     }
