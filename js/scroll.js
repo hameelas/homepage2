@@ -14,7 +14,7 @@ function setIsSmartphone() {
 function init() {
     setIsSmartphone();
     org_height = $('header').outerHeight();
-    org_size = $('.circular').outerHeight();
+    org_size = $('.profilepic').outerHeight();
     org_left_padding  = parseInt($('.logowrapper').css('padding-left'));
 }
 
@@ -49,9 +49,9 @@ function updateSizes() {
    var progress = (org_height - target) / (org_height - limit);
 
    var new_size = progress  * 0.75 * limit + (1 - progress) * org_size;
-   $('.circular').outerHeight(new_size + 'px');
-   $('.circular').outerWidth(new_size + 'px');
-   $('.circular').css({ 'background-size': new_size + 'px ' + new_size + 'px' });
+   $('.profilepic').outerHeight(new_size + 'px');
+   $('.profilepic').outerWidth(new_size + 'px');
+   $('.profilepic').css({ 'background-size': new_size + 'px ' + new_size + 'px' });
 
    var new_padding = progress * screenW * (isSmartphone? 0.05 : 0.12) + (1 - progress) * org_left_padding;
    $('.logowrapper').css('padding-left', new_padding + 'px');

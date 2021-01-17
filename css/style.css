@@ -204,17 +204,17 @@ article ul {
 	/*padding-left: 60px;*/
 }
 
-.circular {
+.profilepic {
 	width: 230px;
 	height: 230px;
 	/*border-radius: 50%;
 	background: url(../img/me5.jpg) no-repeat;
 	background-size: 230px 230px;*/
 	text-align: center;
-	border: 4px solid #FFF;
+	border: 1px solid #FFF;
 }
 
-.circular img {
+.profilepic img {
 	/*opacity: 0;*/
 	width: 230px;
 	height: 230px;
