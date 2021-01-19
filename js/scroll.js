@@ -76,8 +76,12 @@ function pageTitle() {
 }
 
 function correctBackground() {
+    const oldIsSmartphone = isSmartphone;
     setIsSmartphone();
-    if (isSmartphone) {
+    if (oldIsSmartphone !== isSmartphone) {
+        init();
+    }
+    else if (isSmartphone) {
         $('.cover').addClass('vertical');
         $('.cover').css('background-size', '100% auto');
     }
