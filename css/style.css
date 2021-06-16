@@ -110,6 +110,88 @@ span.button.resume{
 	background: url(../img/resume.png) no-repeat;
 }
 
+span.giri{
+	font-size: small;
+	padding: 5px;
+	display: inline-block;
+	color: #7f7f7f !important;
+}
+
+span.box.a{
+	cursor: pointer !important;
+}
+
+span.a.box{
+	cursor: pointer !important;
+}
+
+span.a{
+	cursor: pointer !important;
+}
+
+span.box{
+	width: 1em;
+	min-height: 1em;
+	margin-left: 0.5em;
+	height: 1em;
+	min-width: 1em;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	cursor: pointer;
+	display: inline-block;
+	background-size: contain !important;
+}
+
+span.box.link{
+}
+
+span.details{
+	font-weight: bolder;
+	background-color: #eebb20 !important;
+}
+span.details.light{
+	background-color: #ffdd40 !important;
+}
+
+span.box.light{
+	border: #eebb20 2px solid;
+	border-radius: 3px;
+	width: 1.2em;
+	min-height: 1.2em;
+	margin-left: 0.4em;
+	height: 1.2em;
+	min-width: 1.2em;
+}
+
+span.box.link.gooj{
+	top: 0.6em;
+}
+
+span.upload{
+	background-color: #dfaf5f !important;
+}
+
+span.oldslide{
+	background-color: #419e2a !important;
+}
+
+span.slide{
+	background-color: #c12e2a !important;
+}
+
+span.conference{
+	background-color: #2e6da4 !important;
+}
+
+span.poster{
+	background-color: #66afe9 !important;
+}
+
+span.arxiv{
+	background-color: #3c3c3c !important;
+}
+
 .righty {
 	margin-right: 10%;
 }
@@ -205,8 +287,8 @@ article ul {
 }
 
 .profilepic {
-	width: 230px;
-	height: 230px;
+	width: 375px;
+	height: 361px;
 	/*border-radius: 50%;
 	background: url(../img/me5.jpg) no-repeat;
 	background-size: 230px 230px;*/

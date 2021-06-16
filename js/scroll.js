@@ -11,6 +11,29 @@ function setIsSmartphone() {
     isSmartphone = (screenW < screenH);
 }
 
+function addTooltips() {
+    console.log('yo');
+    $('p span.box').each(function() {
+        console.log('registering ' + $(this).attr('class') + $(this).attr('title'));
+        $(this).on("mouseenter", function () {
+            const message = $(this).attr('title');
+            console.log('the title is ' + message);
+            $(this).addClass('light');
+            $(this).parent().parent().children(".tooltipX").each(function () {
+                $(this).html(message);
+            });
+        }).on("mouseleave", function (){
+            $(this).parent().parent().children(".tooltipX").each(function () {
+                $(this).html("");
+            });
+
+            $(this).removeClass('light');
+        });
+    });
+
+    console.log($('p a span.box'));
+}
+
 function init() {
     setIsSmartphone();
     org_height = $('header').outerHeight();
@@ -26,6 +49,7 @@ function get_y() {
 }
 
 function updateSizes() {
+    console.log('updatesizes');
    var y = get_y();
    var limit = screenH/4 + 1;
    var target = Math.max(limit, org_height - y);
@@ -101,6 +125,7 @@ $(document).ready(function() {
         $('.scroll-wrapper').removeClass('snappy-scroll');
         $('.logowrapper').css('padding-top', '5%');
     }
+    addTooltips();
 });
 
 $('.scroll-wrapper').scroll(function () {
