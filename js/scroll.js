@@ -126,12 +126,12 @@ $(document).ready(function() {
         $('.logowrapper').css('padding-top', '5%');
     }
     addTooltips();
-	updateSize();
+    updateSizes();
 });
 
 $('.scroll-wrapper').scroll(function () {
-    updateSizes();
     correctBackground();
+    updateSizes();
     if (!isSmartphone) {
         pageTitle();
     }
