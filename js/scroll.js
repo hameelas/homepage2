@@ -12,7 +12,7 @@ function setIsSmartphone() {
 }
 
 function addTooltips() {
-    console.log('yo');
+    console.log('yo! what are you looking at?');
     $('p span.box').each(function() {
         console.log('registering ' + $(this).attr('class') + $(this).attr('title'));
         $(this).on("mouseenter", function () {
@@ -84,8 +84,8 @@ function updateSizes() {
 function pageTitle() {
     var pagemap = {
         '': 0,
-        'About Me': screenH / 2,
-        'Publications': 3 * screenH / 2,
+        'About Me': screenH,
+        'Publications': 5 * screenH / 2,
         'Codes': 6 * screenH / 2
     };
     var y = get_y();
@@ -126,6 +126,7 @@ $(document).ready(function() {
         $('.logowrapper').css('padding-top', '5%');
     }
     addTooltips();
+	updateSize();
 });
 
 $('.scroll-wrapper').scroll(function () {

@@ -28,6 +28,19 @@ body {
 	pointer-events: none;
 }
 
+.emeph {
+	color: rgb(90, 140, 220);
+	font-weight: thick;
+}
+
+.emph {
+	color: rgb(240, 70, 65);
+}
+
+.pending {
+	color: rgb(240, 160, 120);
+}
+
 a {
 	color: rgb(240, 40, 25);
 	text-decoration: none !important;
