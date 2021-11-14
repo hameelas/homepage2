@@ -1,6 +1,6 @@
 var screenH;
 var screenW;
-var isSmartphone;
+var isSmartphone=false;
 var org_height;
 var org_size;
 var org_left_padding;;
